@@ -14,7 +14,8 @@ function App() {
   }
 
   const increment = () => {
-    setSteps(steps + 1);
+    setSteps((prevState) => prevState + 1);
+    setSteps((prevState) => prevState + 1);
   }
 
   const decrement = () => {
