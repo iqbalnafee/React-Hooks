@@ -5,13 +5,16 @@ function App() {
 
   const [name, setName] = useState("Nafees");
 
+  const [flag, setFlag] = useState(false);
+
   const changeName = () => {
-    setName("Iqbal");
+    //setName("Iqbal");
+    setFlag(!flag);
   }
 
   return (
     <div className="App">
-      <div>Hello {name}</div>
+      <div>Hello {flag ? name : ""}</div>
       <button className="btn-primary" onClick={changeName} style={{ marginTop: "10px" }}> Click Me </button>
     </div >
   );
