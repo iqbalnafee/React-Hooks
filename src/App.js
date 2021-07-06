@@ -1,5 +1,8 @@
 
 import './App.css';
+import CComponents from './components/CComponents';
+import FComponents from './components/FComponents';
+
 import React, { useState } from 'react';
 function App() {
 
@@ -35,6 +38,10 @@ function App() {
     setName("");
   }
 
+  const setBooleanFlag = () => {
+    setFlag(!flag);
+  }
+
   return (
     <div className="App">
       <div>Hello {flag ? name : ""}</div>
@@ -55,6 +62,8 @@ function App() {
 
       </form>
 
+
+
       <ul>
 
         {names.map((item) => (
@@ -62,6 +71,12 @@ function App() {
         ) )}
 
       </ul>
+
+      <hr></hr>
+
+      <button onClick={setBooleanFlag}>Toggle class Component</button>
+
+      {flag ? <CComponents />:""}
 
     </div >
   );
