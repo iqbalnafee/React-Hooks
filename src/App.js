@@ -7,7 +7,10 @@ function App() {
 
   const [flag, setFlag] = useState(false);
 
-  const [steps, setSteps] = useState(0);
+  const [steps, setSteps] = useState(() => {
+    console.log("clicked");
+    return 0;
+  });
 
   const [names, setNames] = useState([]);
 
