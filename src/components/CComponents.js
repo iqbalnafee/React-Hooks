@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 
 export default class CComponents extends Component {
 
-    
+    constructor(props) {
+        super(props)
+        this.showDate = this.showDate.bind(this)
+    }
 
     state = {
         message : "Class Component",
@@ -11,7 +14,7 @@ export default class CComponents extends Component {
 
     componentDidMount(){
         console.log("I am from Did Mount");
-        this.interval = setInterval(this.showDate(),3000);
+        this.interval = setInterval(this.showDate,1000);
         //The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds).
         //setInterval(function(){ alert("Hello"); }, 3000);
     }
