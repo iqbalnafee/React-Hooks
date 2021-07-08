@@ -8,6 +8,12 @@ const FComponents = () => {
 
     useEffect(() => {
         console.log("Functional Component Mounted Or Updated");
+        const interval = setInterval(showDate,1000);
+
+        return () => {
+            console.log("Cleanup of interval");
+            clearInterval(interval);
+        }
     },[time]);
 
     const showDate = () => {
