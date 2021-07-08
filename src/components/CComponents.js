@@ -4,7 +4,10 @@ export default class CComponents extends Component {
 
     constructor(props) {
         super(props)
-        this.showDate = this.showDate.bind(this)
+        this.showDate = this.showDate.bind(this);
+        //React recommends bind this in all methods that needs to use this of class instead this of self function.
+
+        //But if we use arrow function instead, we dont need to bind showDate() function
     }
 
     state = {

@@ -72,11 +72,17 @@ function App() {
 
       </ul>
 
-      <hr></hr>
+      {/* <hr></hr>
 
       <button onClick={setBooleanFlag}>Toggle class Component</button>
 
-      {flag ? <CComponents />:""}
+      {flag ? <CComponents />:""} */}
+
+      <hr></hr>
+
+      <button onClick={setBooleanFlag}>Toggle Functional Component</button>
+
+      {flag ? <FComponents />:""}
 
     </div >
   );
