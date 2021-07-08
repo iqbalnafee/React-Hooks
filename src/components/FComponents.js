@@ -8,7 +8,7 @@ const FComponents = () => {
 
     useEffect(() => {
         console.log("Functional Component Mounted Or Updated");
-    });
+    },[]);
 
     const showDate = () => {
         setTime(new Date().toString());
